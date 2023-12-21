@@ -7,6 +7,29 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+CONSEGNA:
+
+Creaiamo un database da phpmyadmin (es. train_db)
+Creiamo una tabella trains e relativa Migration
+Ogni treno dovrà avere:
+Azienda
+Stazione di partenza
+Stazione di arrivo
+Orario di partenza
+Orario di arrivo
+Codice Treno
+Numero Carrozze
+In orario
+Cancellato
+È probabile che siano necessarie altre colonne per far funzionare la tabella nel modo corretto :occhiolino:
+Create il Model Train e
+Aggiungete un seeder per la classe Train usando FakerPHP.
+
+BONUS:
+Create  relativo Controller e rotta per mostrare tutti i treni che sono in partenza dalla data odierna.
+
+
+
 ## Installazione Laravel
 
 ```bash
@@ -66,14 +89,19 @@ npm install
 
 # inserisco i dati per il collegamento al db in env
 
-# creo il database da phpmyadmin
+#creo migration
+php artisan make:migration create_nome_tabella_table
 
+#popolare il db
+php artisan make:seeder UsersTableSeeder
 
 # preparo le rotte file web.php es. 
-Route::get('/books', [BookController::class, 'index'])->name('books.index');
+Route::get('/books', [BookController::class,'index'])->name('books.index');
 
 # creo controller
 php artisan make:controller NomeController
+php artisan make:migration update_users_table --table=users
+php artisan make:migration add_phone_number_to_users_table
 
 #creo model
 php artisan make:model Nome
