@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('title', 'Trains')
 
 @section('content')
-<main>
-    <h1>Home page</h1>
+<main class="vh-100 d-flex justify-content-center align-items-center">
+    <h3 class="text-uppercase">
+        Click <a href="{{route('trains.index')}}">here</a> to see the list of all trains
+    </h3>
 </main>
 
 @endsection

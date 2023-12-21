@@ -10,5 +10,47 @@ $fa-font-path: "../webfonts" !default;
 @import '~bootstrap/scss/bootstrap';
 
 h1 {
-    color: $text-color;
+    color: $fire-brick;
+    font-size: 1.2em;
+    margin:0;
+    font-weight:700;
+}
+h2{
+    margin:0;
+}
+nav{
+    .container-fluid{
+    margin:0 auto;
+}
+}
+header {
+    top: 0;
+    left: 0;
+}
+header,footer{
+    height:60px;
+    width:100%;
+    position: fixed;
+    z-index:1000;
+}
+footer{
+    bottom:0;
+    left:0;
+    background-color: white;
+    h2{
+    font-size: 1.2em;
+    }
+}
+main{
+    background-color:$prussian-blue
+}
+a{
+    text-decoration: none;
+    color:$fire-brick;
+}
+h3{
+    color:$papaya-whip;
+}
+a:hover{
+    color:$barn-red;
 }
